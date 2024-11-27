@@ -1,1 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio</title>
+    <style>
+        /* Reset Básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Playfair Display', serif;
+            color: #333;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+        }
+
+        /* Importando a fonte Canvas Script */
+        @font-face {
+            font-family: 'Canvas Script';
+            src: url('fonts/canvas-script.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        /* Barra de Navegação */
+        .navbar {
+            background-color: #6a1b9a; /* Roxo */
+            color: #fff;
+            padding: 1rem 0;
+        }
+
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .navbar .logo {
+            font-family: 'Canvas Script', cursive;
+            font-size: 2.5rem;
+        }
+
+        .navbar .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        .navbar .nav-links a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .navbar .nav-links a:hover {
+            color: #ffcc00;
+        }
+
+        /* Seção Principal */
+        .main-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 50px;
+            background-color: #eaeaea;
+            min-height: 100vh;
+        }
+
+        .main-section .image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f9d9f9;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .main-section .image img {
+            max-width: 300px;
+            border-radius: 10px;
+        }
+
+        .main-section .text {
+            flex: 2;
+            padding: 20px;
+        }
+
+        .main-section .text h2 {
+            font-family: 'Canvas Script', cursive;
+            font-size: 2.5rem;
+            color: #6a1b9a;
+            margin-bottom: 20px;
+        }
+
+        .main-section .text p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .main-section .button {
+            text-decoration: none;
+            font-family: 'Canvas Script', cursive;
+            background-color: #6a1b9a;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+
+        .main-section .button:hover {
+            background-color: #53157a;
+        }
+    </style>
+</head>
+<body>
+    <!-- Barra de Navegação -->
+    <header class="navbar">
+        <div class="container">
+            <h1 class="logo">Portfólio</h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#trabalhos">Trabalhos</a></li>
+                    <li><a href="#sobre-mim">Sobre Mim</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Seção Principal -->
+    <section id="inicio" class="main-section">
+        <div class="image">
+            <img src="eu.png.png" alt="Foto da artista">
+        </div>
+        <div class="text">
+            <h2>Oi, eu sou a Júlia Ghidelli.</h2>
+            <p>Sou artista e designer gráfico que tem uma paixão em transformar ideias em artes que tocam o coração.</p>
+            <a href="#sobre-mim" class="button">Saiba mais!</a>
+        </div>
+    </section>
+</body>
+</html>
 
