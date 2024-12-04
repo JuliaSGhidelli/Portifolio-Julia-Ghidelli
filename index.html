@@ -1,219 +1,42 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio - Júlia Ghidelli</title>
-    <style>
-        /* Reset Básico */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="img_5terre.jpg">
+      <img src="img_5terre.jpg" alt="Cinque Terre" width="600" height="400">
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
 
-        body {
-            font-family: 'Playfair Display', serif;
-            color: #333;
-            line-height: 1.6;
-        /* Importando a fonte Canvas Script */
-        @font-face {
-            font-family: 'Canvas Script';
-            background-color: #f4f4f4;
-        }
 
-            src: url('fonts/canvas-script.ttf') format('truetype');
-            font-weight: normal;
-            font-style: normal;
-        }
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="img_forest.jpg">
+      <img src="img_forest.jpg" alt="Forest" width="600" height="400">
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
 
-        /* Barra de Navegação */
-        .navbar {
-            background-color: #6a1b9a; /* Roxo */
-            color: #fff;
-            padding: 1rem 0;
-        }
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="img_lights.jpg">
+      <img src="img_lights.jpg" alt="Northern Lights" width="600" height="400">
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
 
-        .navbar .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="img_mountains.jpg">
+      <img src="img_mountains.jpg" alt="Mountains" width="600" height="400">
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
 
-        .navbar .logo {
-            font-family: 'Canvas Script', cursive;
-            font-size: 2.5rem;
-        }
+<div class="clearfix"></div>
 
-        .navbar .nav-links {
-            list-style: none;
-            display: flex;
-            gap: 30px;
-        }
-
-        .navbar .nav-links a {
-            text-decoration: none;
-            color: #fff;
-            font-size: 1.2rem;
-            font-weight: bold;
-            transition: color 0.3s ease;
-        }
-
-        .navbar .nav-links a:hover {
-            color: #ffcc00;
-        }
-
-        /* Seção Principal */
-        .main-section {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 50px;
-            background-color: #eaeaea;
-            min-height: 100vh;
-        }
-
-        .main-section .image {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #f9d9f9;
-            padding: 20px;
-            border-radius: 10px;
-        }
-
-        .main-section .image img {
-            max-width: 500px;
-            border-radius: 20px;
-        }
-
-        .main-section .text {
-            flex: 2;
-            padding: 20px;
-        }
-
-        .main-section .text h2 {
-            font-family: 'Canvas Script', cursive;
-            font-size: 2.5rem;
-            color: #6a1b9a;
-            margin-bottom: 20px;
-        }
-
-        .main-section .text p {
-            font-size: 1.2rem;
-            margin-bottom: 20px;
-        }
-
-        .main-section .button {
-            text-decoration: none;
-            font-family: 'Canvas Script', cursive;
-            background-color: #6a1b9a;
-            color: #fff;
-            padding: 10px 20px;
-            border-radius: 5px;
-            font-size: 1.2rem;
-            display: inline-block;
-            transition: background-color 0.3s ease;
-        }
-
-        .main-section .button:hover {
-            background-color: #53157a;
-        }
-
-        /* Galeria de Trabalhos */
-        .gallery-section {
-            background-color: #e0e0e0;
-            padding: 50px 20px;
-        }
-
-        .gallery-section h2 {
-            font-family: 'Canvas Script', cursive;
-            text-align: center;
-            font-size: 2.5rem;
-            color: #6a1b9a;
-            margin-bottom: 30px;
-        }
-
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 15px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .gallery-item {
-            background-color: #fff;
-            border: 2px solid #ddd;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: auto;
-            display: block;
-            transition: transform 0.3s ease;
-        }
-
-        .gallery-item img:hover {
-            transform: scale(1.05);
-        }
-    </style>
-    <link rel="stylesheet" href="https://use.typekit.net/gkg8lpa.css">
-</head>
-<body>
-    <!-- Barra de Navegação -->
-    <header class="navbar">
-        <div class="container">
-            <h1 class="logo">Portfólio</h1>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="#inicio">Início</a></li>
-                    <li><a href="#trabalhos">Trabalhos</a></li>
-                    <li><a href="#sobre-mim">Sobre Mim</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <!-- Seção Principal -->
-    <section id="inicio" class="main-section">
-        <div class="image">
-            <img src="https://i.imgur.com/jtzuD9v.jpeg" alt="Foto da artista">
-        </div>
-        <div class="text">
-            <h2>Oi, eu sou a Júlia Ghidelli.</h2>
-            <p>Sou artista e designer gráfico que tem uma paixão em transformar ideias em artes que tocam o coração.</p>
-            <a href="#trabalhos" class="button">Saiba mais!</a>
-        </div>
-    </section>
-
-    <!-- Galeria de Trabalhos -->
-    <section id="trabalhos" class="gallery-section">
-        <h2>Meus Trabalhos</h2>
-        <div class="gallery">
-            <div class="gallery-item"><img src="https://i.imgur.com/PRR8RoS.jpeg" alt="Trabalho 1"></div>
-            <div class="gallery-item"><img src="https://i.imgur.com/VuRQQfQ.jpeg" alt="Trabalho 2"></div>
-            <div class="gallery-item"><img src="https://i.imgur.com/c8QLz5c.png" alt="Trabalho 3"></div>
-            <div class="gallery-item"><img src="https://i.imgur.com/0TZee8Q.png" alt="Trabalho 4"></div>
-            <div class="gallery-item"><img src="https://i.imgur.com/wLp1jgS.png" alt="Trabalho 5"></div>
-            <div class="gallery-item"><img src="https://i.imgur.com/puKZPg3.jpeg" alt="Trabalho 6"></div>
-            <div class="gallery-item"><img src="https://i.imgur.com/cr9Sm9f.png" alt="Trabalho 7"></div>
-            <div class="gallery-item"><img src="https://i.imgur.com/4p8Jqkc.png" alt="Trabalho 8"></div>
-            <div class="gallery-item"><img src="https://i.imgur.com/sKAyGLg.png" alt="Trabalho 9"></div>
-            <div class="gallery-item"><img src="https://i.imgur.com/enMQ75L.jpeg" alt="Trabalho 10"></div>
-          
-
-        </div>
-    </section>
-</body>
-</html>
-
+<div style="padding:6px;">
 
 
