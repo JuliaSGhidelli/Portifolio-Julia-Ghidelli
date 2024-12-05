@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio - Júlia Ghidelli</title>
-    <!-- Link para o Google Fonts Sofia -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sofia:wght@400;700&display=swap">
-    <!-- Link para o Google Fonts Merriweather -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap">
     <style>
         /* Reset Básico */
@@ -16,16 +14,21 @@
             box-sizing: border-box;
         }
 
+        body {
+            font-family: 'Merriweather', serif; /* Default font for body */
+            background-color: #d9d9d9;
+        }
+
         /* Barra de Navegação */
         .navbar {
-            background-color: #6a1b9a; /* Roxo */
+            background-color: #6a1b9a;
             color: #fff;
             padding: 1rem 0;
-            position: fixed; /* Fix the navbar to the top */
+            position: fixed;
             top: 0;
             left: 0;
             width: 100%;
-            z-index: 1000; /* Ensure navbar stays on top of other content */
+            z-index: 1000;
         }
 
         .navbar .container {
@@ -38,7 +41,7 @@
         }
 
         .navbar .logo {
-            font-family: 'Sofia', cursive; 
+            font-family: 'Sofia', cursive; /* Sofia font for the logo */
             font-size: 2.5rem;
         }
 
@@ -64,12 +67,12 @@
         .main-section {
             display: flex;
             align-items: center;
-            height: 100vh; /* Ensure section takes up the full viewport height */
-            padding-top: 70px; /* Add padding to avoid overlap with navbar */
+            height: 100vh;
+            padding-top: 70px;
         }
 
         .main-section .image {
-            flex: 0 0 33%; /* Image now takes 33% of the horizontal space */
+            flex: 0 0 33%;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -80,32 +83,31 @@
         .main-section .image img {
             width: 100%;
             max-height: 100%;
-            object-fit: contain; /* Ensure the image scales without being cut */
+            object-fit: contain;
         }
 
         .main-section .text {
-            flex: 1; 
+            flex: 1;
             padding: 90px;
-            text-align:left;
+            text-align: left;
         }
 
         .main-section .text h2 {
-            font-family: 'Sofia', cursive; 
+            font-family: 'Sofia', cursive; /* Sofia font for headings */
             font-size: 3rem;
             color: #6a1b9a;
             margin-bottom: 30px;
         }
 
-        /* Complementary text now uses Merriweather font */
         .main-section .text p {
-            font-family: 'Merriweather', serif; /* Apply Merriweather font */
+            font-family: 'Merriweather', serif; /* Merriweather font for paragraphs */
             font-size: 1.2rem;
             margin-bottom: 30px;
         }
 
         .main-section .button {
             text-decoration: none;
-            font-family: 'Sofia', cursive;  
+            font-family: 'Sofia', cursive;
             background-color: #6a1b9a;
             color: #fff;
             padding: 15px 25px;
@@ -119,6 +121,101 @@
             background-color: #53157a;
         }
 
+        /* Container and Profile Section */
+        .container {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .profile-section {
+            margin-right: 30px;
+            text-align: center;
+        }
+
+        .profile-picture {
+            width: 200px;
+            height: 300px;
+            border-radius: 10px;
+            border: 10px solid #f9d9f9;
+            object-fit: cover;
+        }
+
+        .contact {
+            margin-top: 10px;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #000;
+        }
+
+        .info-section {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            width: 100%;
+        }
+
+        .left-column {
+            flex: 1;
+        }
+
+        .right-column {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            gap: 20px;
+        }
+
+        h2 {
+            color: #6c3483;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            font-family: 'Sofia', cursive; /* Sofia font for headings */
+        }
+
+        p {
+            color: #000;
+            line-height: 1.5em;
+            font-size: 1em;
+        }
+
+        .software {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .icons {
+            display: flex;
+            gap: 10px;
+            justify-content: flex-start;
+            margin-top: 10px;
+        }
+
+        .icon {
+            width: 10vw;
+            max-width: 70px;
+            height: 10vw;
+            max-height: 70px;
+            background-color: #6c3483;
+            color: #fff;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+            font-size: 1.2em;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .icon:hover {
+            background-color: #4a2a5b;
+            transform: scale(1.1);
+        }
+
         /* Galeria de Trabalhos */
         .gallery-section {
             background-color: #e0e0e0;
@@ -126,7 +223,7 @@
         }
 
         .gallery-section h2 {
-            font-family: 'Sofia', cursive; 
+            font-family: 'Sofia', cursive; /* Sofia font for headings */
             text-align: center;
             font-size: 2.5rem;
             color: #6a1b9a;
@@ -194,8 +291,9 @@
             <a href="#trabalhos" class="button">Saiba mais!</a>
         </div>
     </section>
-
-    <!-- Galeria de Trabalhos -->
+   
+  
+     <!-- Galeria de Trabalhos -->
     <section id="trabalhos" class="gallery-section">
         <h2>Meus Trabalhos</h2>
         <div class="gallery">
@@ -219,25 +317,57 @@
                 <img src="https://i.imgur.com/wLp1jgS.png" alt="Trabalho 5">
                 <div class="desc">logo de uma marca de pastel</div>
             </div>
-            <div class="gallery-item">
-                <img src="https://i.imgur.com/puKZPg3.jpeg" alt="Trabalho 6">
-                <div class="desc">ilustração feita com caneta bic</div>
-            </div>
+            
             <div class="gallery-item">
                 <img src="https://i.imgur.com/cr9Sm9f.png" alt="Trabalho 7">
                 <div class="desc">ilustração feita de nankin.</div>
             </div>
             <div class="gallery-item">
                 <img src="https://i.imgur.com/4p8Jqkc.png" alt="Trabalho 8">
-                <div class="desc">ilustração de um ser ficticio feita em nakin.</div>
+                <div class="desc">ilustração de um dragão feita em nakin.</div>
             </div>
             <div class="gallery-item">
                 <img src="https://i.imgur.com/sKAyGLg.png" alt="Trabalho 9">
-                <div class="desc">retrato feito em aquarela</div>
+                <div class="desc">retratto feito em aquarela</div>
+            </div>
+            </section>
+
+    <!-- Perfil e Informações -->
+    <section id="sobre-mim">
+        <div class="container">
+            <div class="profile-section">
+                <img src="https://i.imgur.com/Jx9o6hz.jpeg" alt="Foto de Perfil" class="profile-picture">
+                <p class="contact">behance/e-mail</p>
+            </div>
+            <div class="info-section">
+                <div class="left-column">
+                    <div class="about">
+                        <h2>Sobre mim</h2>
+                        <p>Olá, sou uma estudante de design apaixonada por criatividade. Meu portfólio vai explorar técnicas que vão do tradicional ao digital. Cada trabalho que você verá aqui é o resultado do meu compromisso em transformar ideias em expressões visuais únicas e significativas. Seja bem-vindo ao meu universo criativo.</
+                        </p>
+                </div>
+            </div>
+            <div class="right-column">
+                <div class="languages">
+                    <h2>Idiomas</h2>
+                    <p>Português - Nativo</p>
+                    <p>Inglês - Avançado</p>
+                </div>
+                <div class="software">
+                    <h2>Software</h2>
+                    <div class="icons">
+                        <div class="icon">Ai</div>
+                        <div class="icon">Ps</div>
+                        <div class="icon">Ae</div>
+                    </div>
+                </div>
             </div>
         </div>
-    </section>
+    </div>
 </body>
 </html>
+
+
+
 
 
